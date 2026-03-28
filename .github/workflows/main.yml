@@ -1,0 +1,20 @@
+name: Build and Test
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  build-and-test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Print a message
+        run: echo "CI/CD workflow has started"
+      - name: Build and test
+        run: |
+          echo "Building and testing the code..."
+          echo "Build and test successful"
